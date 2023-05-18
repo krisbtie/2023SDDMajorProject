@@ -1,0 +1,48 @@
+{%extends 'layouts.html'%}
+
+{%block content%}
+<!-- Bootstrap5 two-Card definition start ---------->
+<!-- Card1 first column of two-column card  ---------->
+<div class="row">
+  <div class="col-sm-5">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Education facts in 2021 census</h5>
+        <p class="card-text">The 2021 Census showed that Australians are well-educated, with 72% of people having completed Year 12 or equivalent. This is higher than the OECD average of 64%. This shows that Australia is a highly educated country, and the level of educational attainment is increasing over time. This is good news for Australia, as it means that we have a well-educated workforce that is well-equipped to compete in the global economy.
+
+        </p>
+
+        <div>
+          <img src="{{url_for('static',filename='education.jpeg')}}" alt="Class in Classroom" width="495" height="300">
+        </div>
+
+        <!-- <a href="#" class="btn btn-primary">Go somewhere</a>  -->
+      </div>
+    </div>
+  </div>
+<!-- Card2 second column of two-column card  ---------->
+  <div class="col-sm-7">
+    <div class="card">
+      <div class="card-body">
+       <!-- <h5 class="card-title">Population by Generation</h5>  -->
+        <!-- <p class="card-text">With supporting text below as a natural lead-in to additional content.</p> -->
+        <div class="embed-responsive embed-responsive-16by9">
+          <h5>Instituion by Male, Female as at 2021 Census</h5>
+          <p>As per the 2021 census, more females than males were attending an educational institution. Males were more likely to be attending a vocational education institution than females , while females were more likely to be attending a university or other higher education institution than males.</p>
+          <iframe class="embed-responsive-item"
+            srcdoc="{{plot_html}}" width="700" height="420">  <!-- style="float:left" -->
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--  Bootstrap5 Card definition end ---------->
+{%endblock content%}
+
+<!-- Bootstrap5 Javascipt -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
+
+</body>
+</html>
+

@@ -1,0 +1,89 @@
+{%extends 'layouts.html'%}
+
+{%block content%}
+<!-- Bootstrap5 two-Card definition start ---------->
+<!-- Card1 first column of two-column card  ---------->
+<div class="row">
+  <div class="col-sm-5">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Population facts in 2021 census</h5>
+        <p class="card-text">According to the 2021 Australian census, the country's population has continued to grow steadily, reaching 25.7 million people, an increase of around 1.7 million since the last census in 2016. The census data shows that the most populous states in Australia are New South Wales, Victoria, and Queensland, which together account for almost 80% of the population.
+        </p>
+
+        <div>
+          <img src="{{url_for('static',filename='crowd.jpg')}}" alt="Crowd of People" width="495" height="300">
+        </div>
+
+        <!-- <a href="#" class="btn btn-primary">Go somewhere</a>  -->
+      </div>
+    </div>
+  </div>
+<!-- Card2 second column of two-column card  ---------->
+  <div class="col-sm-7">
+    <div class="card">
+      <div class="card-body">
+       <!-- <h5 class="card-title">Population by Generation</h5>  -->
+        <!-- <p class="card-text">With supporting text below as a natural lead-in to additional content.</p> -->
+<!--  Bootstrap5 Carousel definition start ---------->
+       <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel" data-interval="10000">
+        <div class="carousel-inner" role="listbox">
+          <div class="carousel-item active">
+            <div class="embed-responsive embed-responsive-16by9">
+              <h5>Population by Generation</h5>
+              <p>The 2021 Australian census reveals that the Baby Boomer generation, born between 1946 and 1965, remains one of largest generations in the country, alongside Millennials, born between 1981 and 1996, both of which comprise approximately 21.5% of the population each. The following largest generations are Gen X, born between 1966 and 1980, accounting for around 19.3% of the population, and Gen Z, born between 1997 and 2012, representing around 18.2%. Gen Alpha, born 2012 and onwards, then makes up 12% and Interwar, born 1946 and before, makes up 7.5%.</p>
+              <iframe class="embed-responsive-item"
+                srcdoc="{{plot_html}}" width="700" height="420">  <!-- style="float:left" -->
+              </iframe>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <div class="embed-responsive embed-responsive-16by9">
+              <h5>Population by State</h5>
+              <p>The 2021 Australian census data reveals that New South Wales is the most populous state with over 8 million residents, followed by Victoria and Queensland. While the three eastern states are the most populous, the data also highlights the significant differences in population size between states and territories.</p>
+              <iframe class="embed-responsive-item"
+                srcdoc="{{plot_html2}}" width="700" height="420">
+              </iframe>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <div class="embed-responsive embed-responsive-16by9">
+              <h5>Population by Age Group, Male, Female</h5>
+              <p>The 2021 Australian census data reveals that New South Wales is the most populous state for both males and females, followed by Victoria and Queensland. </p>
+              <iframe
+                class="embed-responsive-item"
+                srcdoc="{{plot_html3}}" width="700" height="420">
+              </iframe>
+            </div>
+          </div>
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="false"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+
+        <!--
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="false"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+        -->
+
+      </div>
+<!--  Bootstrap5 Carousel definition end ---------->
+      </div>
+    </div>
+  </div>
+</div>
+<!--  Bootstrap5 Card definition end ---------->
+{%endblock content%}
+
+<!-- Bootstrap5 Javascipt -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
+
+</body>
+</html>
+

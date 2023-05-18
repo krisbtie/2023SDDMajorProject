@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial scal=1.0">
+    <title>{{title}}</title>
+<!-- Bootstrap 5 CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+<!-- Custom main.css -->
+    <link rel="stylesheet" href="{{url_for('static', filename='main.css')}}">
+ <!-- References used:
+      https://www.javatpoint.com/how-to-change-the-navigation-bar-color-in-bootstrap
+      collapsing class: .navbar-expand-xl|lg|md|sm (stacks the navbar vertically on extra large, large, medium or small screens).
+      https://bootstrapious.com/p/how-to-change-bootstrap-navbar-height => used py-0
+ -->
+<!-- Define Navigation Bar start -->
+    <nav class="navbar navbar-expand-lg py-0 navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"><img src="{{url_for('static',filename='home.png')}}" alt="logo"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="{{url_for('home')}}">Home</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="{{ url_for('population') }}">Population</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="{{ url_for('education') }}">Education</a>
+            </li>
+
+
+            <li class="nav-item">
+              <a class="nav-link" href="{{ url_for('assistance') }}">Core Activity Need for Assistance</a>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+    </nav>
+<!-- Define Navigation Bar end -->
+</head>
+<body>
+    {%block content%}
+    {%endblock content%}
+<!-- Bootstrap 5 Javascipt -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
+</body>
+</html>
+
+
+
