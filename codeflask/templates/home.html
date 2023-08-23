@@ -1,10 +1,31 @@
-{%  extends 'layouts.html'%}
+{% extends 'layouts.html' %}
 
-{%block content%}
-    <h1 style="text-align:center;">Census Data Visualisations</h1>
+{% block content %}
+    <style>
+        body {
+            background-image: url('../static/css/background.jpg');background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;}
+
+       h1 {
+           font-size: 60px;
+           margin-top: 110px;
+           margin-left: 70px;
+       }
+   </style>
+
+
+    <h1 style="text-align:left;">Census Data Visualisations</h1>
+    <p class="p1">This website provides data visualisations of census data from Australia, as of 2021. You can explore data visualisations on a range of different census topics including Population, Education, and Core Activity Need for Assistance.</p>
+    <div class="inline-container">
+        <p class="p2">Don't know how to navigate the site?</p>
+        <a href="https://www.pinterest.com.au/pin/581245895678587750/" class="button">Click Here</a>
+    </div>
+<!--
     <div class="test1"  style="text-align:center;">
         <p>This website provides data visualizations of census data from Australia, as of 2021. You can explore different types of data visualizations, such as population by state, median income by state, and unemployment rate by state.</p>
     </div>
      <script src="{{url_for('static',filename='main.js')}}"></script>
-{%endblock content%}
+-->
 
+{% endblock content %}
