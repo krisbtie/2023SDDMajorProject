@@ -1,6 +1,6 @@
 h1 {
-    border: 2px #eee solid;
-    color: brown;
-    text-align: center;
+    color: #ff0000;
+    text-align: left;
     padding: 10px;
+    margin-top: 10px;
 }
